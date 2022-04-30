@@ -140,7 +140,7 @@ const Login = () => {
             </form>
           
         <SignUp>
-                <span className='spanText'><img src={Facebook}/> Login with Facebook</span>
+                <span className='spanText'><img src={Facebook} alt="facebook logo"/> Login with Facebook</span>
                 <p className='signUp'>New to Netflix? <Link to="/">Sign up now</Link></p>
                 <p className='learnMore'>This page is protected by Google reCAPTCHA to ensure you're not a bot. <Link to="/">Learn more.</Link></p>
 
