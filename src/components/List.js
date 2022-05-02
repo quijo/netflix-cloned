@@ -16,7 +16,7 @@ color:white;
 `
 const ListWrap = Styled.div`
 display: flex;
-/* display: relative; */
+display: absolute;
 width: 100%;
 
 
@@ -34,7 +34,7 @@ margin-left:auto;
     margin-top:35px ;
     height:50px;
     cursor:pointer;
-    z-index:3
+    z-index:999;
     
     
 }
@@ -47,6 +47,7 @@ margin-left:auto;
     height:50px;
     cursor:pointer;
     margin-top:35px ;
+    z-index:998;
 
 }
 `
@@ -57,6 +58,7 @@ width: max-content;
 gap:5px;
 translate:translateX(0);
 transition: all 1s ease;
+
 
 `
 
@@ -83,16 +85,16 @@ const List = () => {
         <ListWrap>
             <BsChevronLeft className='leftArr' onClick={()=>handleClick("left")}/>
                 <MovieWrap ref={listRef}>
-                    <ListItem />
-                    <ListItem />
-                    <ListItem />
-                    <ListItem />
-                    <ListItem />
-                    <ListItem />
-                    <ListItem />
-                    <ListItem />
-                    <ListItem />
-                    <ListItem />
+                    <ListItem index={0}/>
+                    <ListItem index={1}/>
+                    <ListItem index={2}/>
+                    <ListItem index={3}/>
+                    <ListItem index={4}/>
+                    <ListItem index={5}/>
+                    <ListItem index={6}/>
+                    <ListItem index={7}/>
+                    <ListItem index={8}/>
+                    <ListItem index={9}/>
                 </MovieWrap>
             <BsChevronRight className='rightArr' onClick={()=>handleClick("right")}/>
         </ListWrap>

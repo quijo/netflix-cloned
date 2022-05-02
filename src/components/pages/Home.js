@@ -96,6 +96,10 @@ const GetStarted = Styled.div`
         :hover{
             background-color:rgb(227,30,20)
         }  
+        a{
+            color:white;
+            text-decoration:none;
+        }
     }
 
 `

@@ -15,7 +15,8 @@ import List from '../../components/List'
 
 
 const DashboardWrap = Styled.div`
-overflow:hidden;
+
+
 video{
     position: absolute;
     z-index: -1;
@@ -189,7 +190,9 @@ setIsScrolled(window.scrollY === 0 ? false : true)
                 <List />
         </MovieList>
         
-  
+    <div style={{height:500, background:"black"}}>
+
+    </div>
     </DashboardWrap>
   )
 }
