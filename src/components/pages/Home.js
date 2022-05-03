@@ -122,7 +122,7 @@ const Home = () => {
             <p>Ready to watch? Enter your email to create or restart your membership.</p>
             <form>
                 <input type="text" placeholder='Email Address'/>
-               <button><Link to="/dashboard">Get Started </Link><FaChevronRight/></button>
+               <button><Link to="/login">Get Started </Link><FaChevronRight/></button>
             </form>
         </GetStarted>
 

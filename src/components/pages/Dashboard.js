@@ -78,7 +78,15 @@ align-items:center;
 width: 100%;
 background-color:rgba(0,0,0,0.8) ;
 transition:ease-in-out 0.3s;
-
+.logout{
+    padding:10px 20px;
+    background-color:#E50914;
+    color:white;
+    border-style:none;
+    border-radius:5px;
+    font-size:1rem;
+    cursor:pointer;
+}
 img{
     width: 100px;
     margin-left:50px;
@@ -126,6 +134,7 @@ img{
     padding:0;
     margin:0 5px 0 0;
 }
+
 `
 const MovieList=Styled.div`
 margin-top:600px;
@@ -149,7 +158,9 @@ setIsScrolled(window.scrollY === 0 ? false : true)
       setIsPlay(!isPlay)
   }
 
-
+  const handleClick = ()=>{
+      window.location.href = "/"
+  }
   return (
     <DashboardWrap>
         <Navbar className={isScrolled ? "isScrolled" : ""}>
@@ -170,9 +181,11 @@ setIsScrolled(window.scrollY === 0 ? false : true)
                 <span>KIDS</span>
                 <BsBellFill />
                 <Profile> 
-                <img src={Avatar} alt="avatar"/>
-                <BsFillCaretDownFill/>
+                    <img src={Avatar} alt="avatar"/>
+                    <BsFillCaretDownFill />
+                    
                 </Profile>
+                <button onClick={()=>handleClick()} className="logout">Logout</button>
             </Right>
         </Navbar>
         

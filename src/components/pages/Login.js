@@ -1,12 +1,13 @@
-import React from 'react'
+import React, {useRef} from 'react'
 import Styled from 'styled-components'
 import NetflexBg from '../../images/bg.jpg'
 import Facebook from '../../images/facebook.png'
 import {Link} from 'react-router-dom'
+import { getDefaultNormalizer } from '@testing-library/react'
 
 const MainWrap =Styled.div`
 background-image:url(${NetflexBg});
-height:790px;
+height:100vh;
 width:100%;
 background-position: center;
   background-repeat: no-repeat;
@@ -127,16 +128,31 @@ p:nth-child(2) a{
 
 
 const Login = () => {
+    const handleSubmit = (e)=>{
+        e.preventDefault()
+
+     const userEmail = "rjohnquia@gmail.com";
+     const userPassword = "hello123"
+
+      const email = e.target.email.value;
+      const password = e.target.password.value;
+
+        if(email === userEmail && password === userPassword){
+            window.location.href = '/dashboard'
+        }else{
+            alert("please check username or password")
+        }
+      
+    }
   return (
     <MainWrap>
         <FormWrap>
-            <form>
+            <form onSubmit={handleSubmit}>
                 <h1>Sign In</h1>
-                <input type="email" placeholder='Email or phone number'/>
-                <input type="password" placeholder='Password'/>
+                <input type="email" name="email" placeholder='Email or phone number' />
+                <input type="password" name="password" placeholder='Password'/>
                 <input type='submit' value="Sign In"/>
                 <input type="checkbox" defaultChecked /><label><span>Remember me</span><span>Need help?</span></label> 
- 
             </form>
           
         <SignUp>

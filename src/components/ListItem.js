@@ -31,7 +31,7 @@ z-index:1;
 -webkit-box-shadow: 2px 3px 15px -1px rgba(0,0,0,0.75);
 -moz-box-shadow: 2px 3px 15px -1px rgba(0,0,0,0.75);
 
-
+}
   img{
     height:150px;
  
@@ -51,13 +51,13 @@ const ListItem = (index) => {
 
   const [isHovered, setIsHovered] = useState(false)
   return (
-    <ListItems 
+    <ListItems
     style={{left: isHovered && index * 225 -50}}
     onMouseEnter={()=>setIsHovered(true)} 
     onMouseLeave={()=>setIsHovered(false)}
     
     >
-   <></>
+  
         <img src={Preview} alt="preview" />
         <div className='itemInfo'>
           <div className='icons'>

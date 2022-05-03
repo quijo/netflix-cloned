@@ -7,7 +7,7 @@ const Container = Styled.div`
     background-position:center;
     background-repeat:none;
     background-size:cover;
-    height:625px;
+    height:100vh;
 
 `
 
