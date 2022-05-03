@@ -1,9 +1,9 @@
-import React, {useRef} from 'react'
+import React from 'react'
 import Styled from 'styled-components'
 import NetflexBg from '../../images/bg.jpg'
 import Facebook from '../../images/facebook.png'
 import {Link} from 'react-router-dom'
-import { getDefaultNormalizer } from '@testing-library/react'
+
 
 const MainWrap =Styled.div`
 background-image:url(${NetflexBg});
